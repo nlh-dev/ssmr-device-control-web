@@ -2,6 +2,8 @@
 
     namespace app\models;
 
+use PDO;
+
     if (file_exists(__DIR__."/../../config/server.php")) {
         require_once __DIR__."/../../config/server.php";
     }
@@ -13,6 +15,9 @@
         private $dbUser = DBUSER;
         private $dbPassword = DBPASSWORD;
 
+        protected function dbConnect(){
+            
+        }
 
     }
 
