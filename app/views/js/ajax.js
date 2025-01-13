@@ -33,7 +33,7 @@ AjaxForms.forEach(forms => {
                 fetch(action, config)
                 .then(response => response.json())
                 .then(response => {
-                    return ajaxAlert(response);
+                    return ajaxAlert(response)
                 }).catch(error => {
                     console.log(error);
                 });
