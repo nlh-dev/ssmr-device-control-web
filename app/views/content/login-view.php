@@ -24,16 +24,6 @@
     </div>
 </div>
 
-<script>
-    Swal.fire({
-        icon: 'error',
-        title: 'Error!',
-        text: 'Los campos están vacios',
-        confirmButtonText: "Aceptar",
-        confirmButtonColor: "#3085d6",
-    });
-</script>
-
 <?php
 if (isset($_POST['loginUser']) && isset($_POST['loginPassword'])) {
     $instanceLogin->singInController();
