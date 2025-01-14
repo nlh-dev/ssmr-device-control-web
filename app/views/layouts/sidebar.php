@@ -10,7 +10,7 @@
                     </svg>
                 </button>
                 <a href="<?= APPURL ?>home" class="flex ms-2 md:me-24">
-                    <img src="<?= APPURL ?>/app/views/images/ssmr-2.ico" class="h-8 me-3" alt="">
+                    <img src="<?= APPURL ?>app/views/images/ssmr-2.ico" class="h-8 me-3" alt="">
                     <span class="self-center text-white text-lg font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Entrega de Dispositivos</span>
                 </a>
             </div>
@@ -47,7 +47,7 @@
     <div class="h-full px-3 pb-4 overflow-y-auto bg-gray-900 dark:bg-gray-800">
         <ul class="space-y-2 font-medium">
             <li>
-                <a href="<?= APPURL?>/home" class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
+                <a href="<?= APPURL?>home" class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
                 <svg class="w-7 h-7 text-gray-500 transition duration-75" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                             <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
                         </svg>
@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li>
-                <a href="<?= APPURL;?>/controlPanel" class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
+                <a href="<?= APPURL;?>controlPanel" class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
                     <svg class="w-7 h-7 text-gray-500 transition duration-75" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" d="M9 2.221V7H4.221a2 2 0 0 1 .365-.5L8.5 2.586A2 2 0 0 1 9 2.22ZM11 2v5a2 2 0 0 1-2 2H4v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7ZM8 16a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm1-5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z" clip-rule="evenodd" />
                     </svg>
@@ -64,7 +64,7 @@
                 </a>
             </li>
             <li>
-                <a href="<?= APPURL?>/controlStorage" class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
+                <a href="<?= APPURL?>controlStorage" class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
                     <svg class="w-7 h-7 text-gray-500 transition duration-75" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" d="M9 2.221V7H4.221a2 2 0 0 1 .365-.5L8.5 2.586A2 2 0 0 1 9 2.22ZM11 2v5a2 2 0 0 1-2 2H4v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7Zm3 2h2.01v2.01h-2V8h2v2.01h-2V12h2v2.01h-2V16h2v2.01h-2v2H12V18h2v-1.99h-2V14h2v-1.99h-2V10h2V8.01h-2V6h2V4Z" clip-rule="evenodd" />
                     </svg>
@@ -72,7 +72,7 @@
                 </a>
             </li>
             <li>
-                <a href="<?= APPURL?>/users" class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
+                <a href="<?= APPURL?>users" class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group">
                     <svg class="w-7 h-7 text-gray-500 transition duration-75" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" d="M12 6a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm-1.5 8a4 4 0 0 0-4 4 2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-3Zm6.82-3.096a5.51 5.51 0 0 0-2.797-6.293 3.5 3.5 0 1 1 2.796 6.292ZM19.5 18h.5a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-1.1a5.503 5.503 0 0 1-.471.762A5.998 5.998 0 0 1 19.5 18ZM4 7.5a3.5 3.5 0 0 1 5.477-2.889 5.5 5.5 0 0 0-2.796 6.293A3.501 3.501 0 0 1 4 7.5ZM7.1 12H6a4 4 0 0 0-4 4 2 2 0 0 0 2 2h.5a5.998 5.998 0 0 1 3.071-5.238A5.505 5.505 0 0 1 7.1 12Z" clip-rule="evenodd" />
                     </svg>

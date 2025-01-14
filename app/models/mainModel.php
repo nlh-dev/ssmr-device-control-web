@@ -23,7 +23,7 @@ use PDO;
 			return $dbConnection;
         }
 
-        // FUNCTION TO EXECUTE A REQUESTO TO DATABASE
+        // FUNCTION TO EXECUTE A REQUEST DATA TO DATABASE
         protected function dbRequestExecute($dbRequest){
 			$dbRequest_SQL=$this->dbConnect()->prepare($dbRequest);
 			$dbRequest_SQL->execute();
@@ -75,7 +75,7 @@ use PDO;
 			}
 			$saveData_Query.=")";
 
-			$dbSaveData_SQL=$this -> dbConnect()->prepare($saveData_Query);
+			$dbSaveData_SQL = $this -> dbConnect()->prepare($saveData_Query);
 
 			foreach ($data as $key){
 				$dbSaveData_SQL -> bindParam($key["db_ValueName"], $key["db_realValue"]);
@@ -128,6 +128,7 @@ use PDO;
 
 		// FUNCTION TO DELETE DATA FROM DATABASE
 		protected function deleteData($table, $field, $id){
+            
             $delteData_SLQ=$this->dbConnect()->prepare("DELETE FROM $table WHERE $field= :ID");
             $delteData_SLQ->bindParam(":ID", $id);
             $delteData_SLQ->execute();

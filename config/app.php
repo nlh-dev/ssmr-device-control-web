@@ -1,6 +1,6 @@
 <?php
 
-    const APPURL = "http://localhost/php/controles";
+    const APPURL = "http://localhost/php/controles/";
     const APPNAME = "SSMR | Controles";
     const APPSESSION_NAME = "SSMR";
 
