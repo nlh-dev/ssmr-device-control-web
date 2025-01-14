@@ -24,6 +24,9 @@ if (isset($_GET['views'])) {
     <?php
 
     use app\controllers\viewsController;
+    use app\controllers\loginController;
+
+    $instanceLogin = new loginController();
 
     $viewsController = new viewsController();
     $views = $viewsController->obtainViews($url[0]);
