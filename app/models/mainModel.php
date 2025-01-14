@@ -1,8 +1,7 @@
 <?php
 
     namespace app\models;
-
-use PDO;
+    use \PDO;
 
     if (file_exists(__DIR__."/../../config/server.php")) {
         require_once __DIR__."/../../config/server.php";

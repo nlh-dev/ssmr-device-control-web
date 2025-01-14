@@ -66,22 +66,22 @@
             $userRegisterData = [
                 [
                     "db_FieldName" => "user_FirstName",
-                    "db_ValueName" => ":Nombre",
+                    "db_ValueName" => ":FirstName",
                     "db_realValue" => $firstName
                 ],
                 [
                     "db_FieldName" => "user_LastName",
-                    "db_ValueName" => ":Apellido",
+                    "db_ValueName" => ":LastName",
                     "db_realValue" => $lastName
                 ],
                 [
                     "db_FieldName" => "user_userName",
-                    "db_ValueName" => ":Usuario",
+                    "db_ValueName" => ":User",
                     "db_realValue" => $userName
                 ],
                 [
-                    "db_FieldName" => "user_userPassword",
-                    "db_ValueName" => ":Contraseña",
+                    "db_FieldName" => "user_Password",
+                    "db_ValueName" => ":Password",
                     "db_realValue" => $userPassword
                 ],
             ];
