@@ -8,8 +8,7 @@ class userController extends mainModel
 {
 
     // CONTROLLER TO ADD USERS
-    public function addUserController()
-    {
+    public function addUserController(){
 
         // STORING THE DATA SENT BY THE FORM
         $firstName = $this->cleanRequest($_POST['firstName']);
@@ -109,8 +108,7 @@ class userController extends mainModel
     }
 
     // USER LIST CONTROLLER
-    public function userTableListController($page, $register, $url, $search)
-    {
+    public function userTableListController($page, $register, $url, $search){
         $page = $this->cleanRequest($page);
         $register = $this->cleanRequest($register);
 
@@ -138,4 +136,6 @@ class userController extends mainModel
 
 
     }
+
+    
 }
