@@ -34,6 +34,11 @@ if (isset($_GET['views'])) {
     if ($views == "login" || $views == "404") {
         require_once "./app/views/content/" . $views . "-view.php";
     } else {
+        //LOG OUT SESSION
+        if((!isset($_SESSION['ID']) || $_SESSION['ID'] == "") || (!isset($_SESSION['userName']) || $_SESSION['userName'] == "")){
+            $instanceLogin->singOutController();
+            
+        }
         require_once "./app/views/layouts/sidebar.php";
         require_once $views;
     }

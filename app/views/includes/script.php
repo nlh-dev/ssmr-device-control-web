@@ -3,5 +3,5 @@
 
 <!-- APPURL IMPORTS -->
 <script src="<?= APPURL?>app/views/js/ajax.js"></script>
-<script src="<?= APPURL?>app/views/js/main.js"></script>
+<script src="<?= APPURL?>app/views/js/mainFunction.js"></script>
 <script src="<?= APPURL?>app/views/js/sweetalert2.all.min.js"></script>
