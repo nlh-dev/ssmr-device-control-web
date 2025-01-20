@@ -71,7 +71,7 @@ class loginController extends mainModel
                                 Swal.fire({
                                     icon: 'error',
                                     title: 'Error!',
-                                    text: 'Usuario o Contraseña Incorrecto',
+                                    text: 'Usuario o Contraseña Invalidos',
                                     confirmButtonText: 'Aceptar',
                                     confirmButtonColor: '#3085d6'});
                             </script>
@@ -83,7 +83,7 @@ class loginController extends mainModel
                     Swal.fire({
                         icon: 'error',
                         title: 'Error!',
-                        text: 'Usuario o Contraseña Incorrecto',
+                        text: 'Usuario o Contraseña Invalidos',
                         confirmButtonText: 'Aceptar',
                         confirmButtonColor: '#3085d6'});
                     </script>
