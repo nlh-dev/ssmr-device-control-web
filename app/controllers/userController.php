@@ -148,6 +148,9 @@ class userController extends mainModel
                             <thead class="text-base text-white uppercase bg-gray-800">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
+                                        #
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
                                         Nombre y Apellido
                                     </th>
                                     <th scope="col" class="px-6 py-3">
@@ -169,6 +172,7 @@ class userController extends mainModel
             foreach ($data as $rows) {
                 $table .= '
                     <tr class="bg-white border-b hover:bg-gray-200">
+                        <td class="px-6 py-3 uppercase"> '.$counter.' </td>
                         <td class="px-6 py-3 font-medium text-gray-900 uppercase">'.$rows['user_FirstName'].' '.$rows['user_LastName'].' </td>
                         <td class="px-6 py-3">'.$rows['user_userName'].'</td>
                         <td class="px-6 py-3">'.$rows['user_Password'].'</td>
@@ -210,9 +214,11 @@ class userController extends mainModel
                 $table .= '
                     <tr class="has-text-centered" >
                         <td colspan="7">
+                        <div class= "flex justify-center items-center my-4">
                             <a href="' . $url . '1/" class="button is-link is-rounded is-small mt-4 mb-4">
                                 Haga clic acá para recargar el listado
                             </a>
+                        </div>
                         </td>
                     </tr>
                 ';
@@ -232,7 +238,7 @@ class userController extends mainModel
         if ($total > 0 && $page <= $numPages) {
             $table .= '<div class="flex justify-end items-center">
                             <p class="has-text-right">
-                                Mostrando <strong>' . $startPage . '</strong> al <strong>' .  $finalPage . ' </strong> de un total de <strong> ' . $total . '</strong> registros
+                                Mostrando de <strong>' . $startPage . '</strong> a <strong>' .  $finalPage . ' </strong> de un total de <strong> ' . $total . '</strong> registros
                             </p>
                         </div>';
 

@@ -139,22 +139,26 @@
 		protected function paginationData($page, $numPages, $url, $buttons)
     {
 
-        $table = '<nav aria-label="Page navigation">';
+        $table = '
+        <div class="flex items-center justify-end mt-3">
+            <nav aria-label="Page navigation">
+        ';
 
         if ($page <= 1) {
             $table .= '
             <ul class="inline-flex -space-x-px text-base h-10">
                 <li>
-                    <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 " disabled>Anterior</a>
+                    <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 rounded-s-lg bg-gray-800 hover:bg-gray-900 border-gray-700 hover:text-white" disabled>Anterior</a>
                 </li>';
         } else {
             $table .= '
+            <div class="flex items-center justify-center>
             <ul class="inline-flex -space-x-px text-base h-10">
                 <li>
-                    <a href="' . $url . ($page - 1) . '/" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 ">Anterior</a>
+                    <a href="' . $url . ($page - 1) . '/" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 rounded-s-lg bg-gray-800 hover:bg-gray-900 border-gray-700 hover:text-white">Anterior</a>
                 </li>
                     <li>
-                    <a href="' . $url . '1/" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">1</a>
+                    <a href="' . $url . '1/" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 bg-gray-800 hover:bg-gray-900 border-gray-700 hover:text-white">1</a>
                 </li>';
         }
 
@@ -166,13 +170,14 @@
 
             if ($page == $counter) {
                 $table .= '
+                
                 <li>
-                    <a href="' . $url . $counter . '/" aria-current="page" class="flex items-center justify-center px-4 h-10 text-blue-600 border border-gray-300 bg-blue-500 hover:bg-blue-100 hover:text-blue-700">' . $counter . '</a>
+                    <a href="' . $url . $counter . '/" aria-current="page" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 bg-gray-800 hover:bg-gray-900 border-gray-700 hover:text-white">' . $counter . '</a>
                 </li>';
             } else {
                 $table .= '
                 <li>
-                    <a href="' . $url . $counter . '/" aria-current="page" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">' . $counter . '</a>
+                    <a href="' . $url . $counter . '/" aria-current="page" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 bg-gray-800 hover:bg-gray-900 border-gray-700 hover:text-white">' . $counter . '</a>
                 </li>';
             }
 
@@ -182,15 +187,16 @@
         if ($page == $numPages) {
             $table .= '
                 <li>
-                    <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700" disabled>Siguiente</a>
+                    <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 bg-gray-800 hover:bg-gray-900 border-gray-700 hover:text-white rounded-e-lg" disabled>Siguiente</a>
                 </li>
             </ul>';
         } else {
             $table .= '
                 <li>
-                    <a href="' . $url . ($page + 1) . '/" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700">Siguiente</a>
+                    <a href="' . $url . ($page + 1) . '/" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 bg-gray-800 hover:bg-gray-900 border-gray-700 hover:text-white rounded-e-lg">Siguiente</a>
                 </li>
-            </ul>';
+            </ul>
+            </div>';
         }
 
         $table .= '</nav>';
