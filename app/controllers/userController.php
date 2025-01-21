@@ -178,7 +178,7 @@ class userController extends mainModel
                         <td class="px-6 py-3">'.$rows['user_Password'].'</td>
                         <td class="px-6 py-3 text-center">
                             <div class="flex justify-center items-center">
-                                                        <a href="" class="text-white bg-gray-700 hover:bg-grey-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-base p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <a href="" class="text-white bg-gray-700 hover:bg-grey-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-base p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                     <path fill-rule="evenodd" d="M4.998 7.78C6.729 6.345 9.198 5 12 5c2.802 0 5.27 1.345 7.002 2.78a12.713 12.713 0 0 1 2.096 2.183c.253.344.465.682.618.997.14.286.284.658.284 1.04s-.145.754-.284 1.04a6.6 6.6 0 0 1-.618.997 12.712 12.712 0 0 1-2.096 2.183C17.271 17.655 14.802 19 12 19c-2.802 0-5.27-1.345-7.002-2.78a12.712 12.712 0 0 1-2.096-2.183 6.6 6.6 0 0 1-.618-.997C2.144 12.754 2 12.382 2 12s.145-.754.284-1.04c.153-.315.365-.653.618-.997A12.714 12.714 0 0 1 4.998 7.78ZM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
                                 </svg>
@@ -212,11 +212,14 @@ class userController extends mainModel
         } else {
             if ($total >= 1) {
                 $table .= '
-                    <tr class="has-text-centered" >
-                        <td colspan="7">
+                    <tr class="bg-white border-b hover:bg-gray-200" >
+                        <td colspan="5">
                         <div class= "flex justify-center items-center my-4">
-                            <a href="' . $url . '1/" class="button is-link is-rounded is-small mt-4 mb-4">
-                                Haga clic acá para recargar el listado
+                            No se encontraron registros
+                        </div>
+                        <div class= "flex justify-center items-center my-4">
+                            <a href="' . $url . '1/" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+                                Haz click aqui para recargar
                             </a>
                         </div>
                         </td>
@@ -224,9 +227,11 @@ class userController extends mainModel
                 ';
             } else {
                 $table .= '
-                    <tr class="has-text-centered" >
+                    <tr class="bg-white border-b hover:bg-gray-200">
                         <td colspan="7">
-                            No hay registros en el sistema
+                        <div class= "flex justify-center items-center my-4">
+                            No se encontraron registros
+                        </div>
                         </td>
                     </tr>
                 ';

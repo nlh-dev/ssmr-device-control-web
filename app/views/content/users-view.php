@@ -48,12 +48,13 @@
         </div>
 
         <?php
-            use app\controllers\userController;
 
-            $instanceUsers = new userController();
+        use app\controllers\userController;
 
-            echo $instanceUsers -> userListController($url[1], 5, $url[0], "");
-        
+        $instanceUsers = new userController();
+
+        echo $instanceUsers->userListController($url[1], 5, $url[0], "");
+
         ?>
 
 

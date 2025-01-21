@@ -148,11 +148,10 @@
             $table .= '
             <ul class="inline-flex -space-x-px text-base h-10">
                 <li>
-                    <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 rounded-s-lg bg-gray-800 hover:bg-gray-900 border-gray-700 hover:text-white" disabled>Anterior</a>
+                    <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 rounded-s-lg bg-gray-800 border-gray-700 cursor-not-allowed">Anterior</a>
                 </li>';
         } else {
             $table .= '
-            <div class="flex items-center justify-center>
             <ul class="inline-flex -space-x-px text-base h-10">
                 <li>
                     <a href="' . $url . ($page - 1) . '/" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 rounded-s-lg bg-gray-800 hover:bg-gray-900 border-gray-700 hover:text-white">Anterior</a>
@@ -187,7 +186,7 @@
         if ($page == $numPages) {
             $table .= '
                 <li>
-                    <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 bg-gray-800 hover:bg-gray-900 border-gray-700 hover:text-white rounded-e-lg" disabled>Siguiente</a>
+                    <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-300 border border-gray-300 bg-gray-800 border-gray-700 rounded-e-lg cursor-not-allowed">Siguiente</a>
                 </li>
             </ul>';
         } else {
