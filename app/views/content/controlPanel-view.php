@@ -59,9 +59,9 @@
                 </thead>
                 <tbody>
                     <tr class="bg-white border-b hover:bg-gray-200">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900">
+                        <td scope="row" class="px-6 py-4 font-medium text-gray-900">
                             Control Samsung
-                        </th>
+                        </td>
                         <td class="px-6 py-4">
                             HM-2-393
                         </td>

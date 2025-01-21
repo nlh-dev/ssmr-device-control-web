@@ -50,6 +50,8 @@
                 </a>
             </div>
 
+            <!-- USER LIST OPTION FOR ADMINISTRATOR -->
+            <?php if ($_SESSION['ID'] == 1) { ?>    
             <div class="p-6 bg-gray-800 rounded-lg dark:bg-gray-800 hover:bg-gray-900">
                 <a href="<?= APPURL ?>users/">
                     <div class="flex justify-start items-center">
@@ -63,7 +65,8 @@
                     <p class="font-bold text-gray-200 dark:text-gray-400">Ver lista de Usuarios</p>
                 </a>
             </div>
-
+            <?php } ?>
+            <!-- OPTIION ENDS -->
         </div>
 
         <!-- <footer class="bg-white rounded-lg shadow dark:bg-gray-800">

@@ -52,7 +52,7 @@
 
             $instanceUsers = new userController();
 
-            echo $instanceUsers -> userTableListController($url[0], 5, $url[0], "");
+            echo $instanceUsers -> userListController($url[1], 5, $url[0], "");
         
         ?>
 
