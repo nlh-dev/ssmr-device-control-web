@@ -1,0 +1,84 @@
+<div class="p-4 sm:ml-64">
+    <div class="p-4 mt-14">
+        <?php
+
+        $userID = $instanceLogin->cleanRequest($url[1]);
+
+        if ($userID == $_SESSION['ID']) {
+            include "./app/views/includes/components/breadcrumbProfile.php";
+        } else {
+            include "./app/views/includes/components/breadcrumbUsers.php";
+        } ?>
+
+        <hr class="my-4">
+        <!-- BREADCRUMB ENDS -->
+
+        <?php
+        $userdata = $instanceLogin->selectData("Unique", "users", "user_ID", $userID);
+
+        if ($userdata -> rowCount() == 1) { ?>
+
+            <form action="<?= APPURL ?>app/ajax/userAjax.php" class="AjaxForm" method="POST" autocomplete="off">
+
+                <input type="hidden" name="userModule" id="userModule" value="updateUser">
+
+                <div class="mb-4 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <svg class="w-8 h-8 text-gray-800 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6 2c-1.10457 0-2 .89543-2 2v4c0 .55228.44772 1 1 1s1-.44772 1-1V4h12v7h-2c-.5523 0-1 .4477-1 1v2h-1c-.5523 0-1 .4477-1 1s.4477 1 1 1h5c.5523 0 1-.4477 1-1V3.85714C20 2.98529 19.3667 2 18.268 2H6Z" />
+                            <path d="M6 11.5C6 9.567 7.567 8 9.5 8S13 9.567 13 11.5 11.433 15 9.5 15 6 13.433 6 11.5ZM4 20c0-2.2091 1.79086-4 4-4h3c2.2091 0 4 1.7909 4 4 0 1.1046-.8954 2-2 2H6c-1.10457 0-2-.8954-2-2Z" />
+                        </svg>
+                        <?php if ($userID == $_SESSION['ID']) { ?>
+                            <h1 class="text-strong text-xl font-bold text-gray-800">
+                                Información de Perfil:
+                                <?= $_SESSION['firstName'] ?>
+                                <?= $_SESSION['lastName'] ?>
+                            </h1>
+                        <?php } else {  ?>
+                            <h1 class="text-strong text-xl font-bold text-gray-800">
+                                Información de Usuario
+                            </h1>
+                        <?php } ?>
+                    </div>
+                </div>
+
+
+
+                <div class="grid mb-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
+                    <div class="relative">
+                        <input type="text" id="firstName" name="firstName" class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" />
+                        <label class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Nombre</label>
+                    </div>
+
+                    <div class="relative">
+                        <input type="text" id="lastName" name="lastName" class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                        <label class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Apellido</label>
+                    </div>
+
+                    <div class="relative">
+                        <input type="text" id="userName" name="userName" class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                        <label class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Nombre de Usuario</label>
+                    </div>
+
+                    <div class="relative">
+                        <input type="text" id="userPassword" name="userPassword" class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                        <label class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Contraseña</label>
+                    </div>
+                </div>
+
+                <div class="flex justify-end items-center sm:col-span-1 lg:col-span-2 xl:col-span-3">
+                    <div class="mr-2">
+                        <?php include "./app/views/includes/components/buttonBack.php"; ?>
+                    </div>
+                    <div>
+                        <button type="submit" id="submitButton" name="submitButton" class="sm:mb-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                            Actualizar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        <?php } else { ?>
+
+        <?php } ?>
+    </div>
+</div>

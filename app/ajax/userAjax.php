@@ -12,6 +12,14 @@
         if ($_POST['userModule'] == "addUser") {
             echo $instanceUser->addUserController();
         }
+
+        if ($_POST['userModule'] == "deleteUser") {
+            echo $instanceUser->deleteUserController();
+        }
+        
+        if ($_POST['userModule'] == "updateUser") {
+            echo $instanceUser->deleteUserController();
+        }
         
     } else {
         session_destroy();

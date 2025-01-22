@@ -9,7 +9,16 @@ class viewsModel
     protected function obtainViewsModel($views)
     {
 
-        $viewsList = ["home", "controlPanel", "controlStorage", "users", "addControl", "addUsers", "logout"];
+        $viewsList = [
+        "home", 
+        "logout",
+        "controlPanel", 
+        "controlStorage", 
+        "addControl", 
+        "users",
+        "addUsers",
+        "updateUsers",
+        ];
 
         if (in_array($views, $viewsList)){
             if (is_file("./app/views/content/".$views."-view.php")) {
