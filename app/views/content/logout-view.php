@@ -1,6 +1,3 @@
 <?php
-
     $instanceLogin -> singOutController();
     
-
-?>

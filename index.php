@@ -39,8 +39,8 @@ if (isset($_GET['views'])) {
             $instanceLogin->singOutController();
             
         }
-        require_once "./app/views/layouts/sidebar.php";
         require_once $views;
+        require_once "./app/views/layouts/sidebar.php";
     }
 
     require_once "./app/views/includes/script.php";
