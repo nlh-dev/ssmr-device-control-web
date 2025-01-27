@@ -1,5 +1,5 @@
 <!-- NAVIGATION BAR -->
-<nav class="fixed top-0 z-50 w-full bg-gray-900">
+<nav class="fixed left-0 top-0 z-50 w-full bg-gray-900">
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
         <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end">
